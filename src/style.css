@@ -1,0 +1,171 @@
+
+/* Modern Music App Global Styles */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: 'Inter', 'Roboto', 'Helvetica Neue', Arial, sans-serif;
+  background: linear-gradient(135deg, #2B2342 0%, #3a2e5a 100%);
+  color: #fff;
+  letter-spacing: 0.01em;
+}
+
+a {
+  color: #FF5C8D;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s;
+}
+a:hover {
+  color: #fff;
+  text-decoration: underline;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  margin: 0 0 0.5em 0;
+}
+
+button, .main-btn {
+  background: linear-gradient(90deg, #FF5C8D 60%, #FFB86C 100%);
+  color: #fff;
+  border: none;
+  border-radius: 16px;
+  font-size: 1.1em;
+  font-weight: 600;
+  padding: 12px 32px;
+  margin: 8px 0;
+  cursor: pointer;
+  box-shadow: 0 2px 12px #FF5C8D33;
+  transition: transform 0.1s, box-shadow 0.2s;
+}
+button:active, .main-btn:active {
+  transform: scale(0.97);
+  box-shadow: 0 1px 4px #FF5C8D22;
+}
+button:focus {
+  outline: 2px solid #FFB86C;
+}
+
+input, select, textarea {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 16px;
+  font-size: 1em;
+  background: #231b36;
+  color: #fff;
+  margin-bottom: 12px;
+  box-shadow: 0 1px 4px #0002;
+  transition: box-shadow 0.2s, background 0.2s;
+}
+input:focus, select:focus, textarea:focus {
+  background: #2B2342;
+  box-shadow: 0 2px 8px #FF5C8D33;
+  outline: none;
+}
+
+.active, .tab-item.active, .top-tabs .active {
+  color: #FFB86C !important;
+  font-weight: 700;
+  background: linear-gradient(90deg, #FF5C8D22 60%, #FFB86C22 100%);
+  border-radius: 12px;
+}
+
+.card, .playlist-item, .album-item, .artist-item, .result-item {
+  background: #231b36;
+  border-radius: 18px;
+  box-shadow: 0 2px 16px #0003;
+  padding: 18px 20px;
+  margin-bottom: 18px;
+  transition: box-shadow 0.2s, transform 0.1s;
+}
+.card:hover, .playlist-item:hover, .album-item:hover, .artist-item:hover, .result-item:hover {
+  box-shadow: 0 4px 32px #FF5C8D33;
+  transform: translateY(-2px) scale(1.02);
+}
+
+.cover, .mini-cover, .avatar {
+  background: linear-gradient(135deg, #FFB86C 0%, #FF5C8D 100%);
+  border-radius: 16px;
+  box-shadow: 0 2px 12px #FF5C8D22;
+}
+
+.tab-bar {
+  background: #231b36;
+  border-top-left-radius: 18px;
+  border-top-right-radius: 18px;
+  box-shadow: 0 -2px 16px #0003;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 8px 0 4px 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+}
+.tab-item {
+  flex: 1;
+  text-align: center;
+  color: #fff;
+  font-size: 1.1em;
+  padding: 8px 0 4px 0;
+  border-radius: 12px;
+  transition: background 0.2s, color 0.2s;
+  cursor: pointer;
+}
+.tab-item.active {
+  color: #FFB86C;
+  background: #FF5C8D22;
+}
+
+.top-tabs {
+  display: flex;
+  justify-content: space-between;
+  background: #231b36;
+  border-radius: 14px;
+  margin-bottom: 18px;
+  padding: 6px 8px;
+}
+.top-tabs span {
+  flex: 1;
+  text-align: center;
+  padding: 8px 0;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+.top-tabs .active {
+  color: #FFB86C;
+  background: #FF5C8D22;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  background: #231b36;
+  border-radius: 8px;
+}
+::-webkit-scrollbar-thumb {
+  background: #FF5C8D55;
+  border-radius: 8px;
+}
+
+/* Utility */
+.center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shadow {
+  box-shadow: 0 4px 24px #FF5C8D33;
+}
+
+@media (max-width: 480px) {
+  .mobile-shell {
+    width: 100vw !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    border-radius: 0 !important;
+  }
+}
